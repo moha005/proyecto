@@ -1,0 +1,152 @@
+/* fijar menu sin espacios en los bordes */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 100px;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+body {
+    font-family: 'open sans';
+    background: #f2f2f2;
+}
+
+
+/*poner el menu estatico*/
+
+nav {
+    width: 100%;
+    position: fixed;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5)
+}
+
+.nav-menu {
+    background: black;
+    height: 80px;
+    color: #fff;
+}
+
+.contenedor-nav {
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    height: inherit;
+    overflow: hidden;
+}
+
+nav .enlaces a {
+    display: inline-block;
+    padding: 5px 0;
+    margin-right: 17px;
+    font-size: 17px;
+    font-weight: 300;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    color: inherit;
+}
+
+nav .enlaces a:hover {
+    border-bottom: 3px solid rgb(219, 144, .5);
+    transition: 0.6s;
+}
+
+.logo>img {
+    height: 80px;
+}
+
+
+/* icono menu responsive */
+
+.icono {
+    display: none;
+    font-size: 24px;
+    padding: 23.5px 20px;
+}
+
+
+/*Galeria de fotos*/
+
+.galeria {
+    width: 90%;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.item {
+    transition: all 300ms;
+}
+
+.item::after {
+    content: "";
+    background-color: rgba(179, 229, 252, .1);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 300ms;
+    opacity: 0;
+}
+
+.item:hover:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item-img {
+    max-width: 100%;
+    display: block;
+}
+
+@media screen and (max-width: 500px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* menu responsive */
+    .icono {
+        display: block;
+        cursor: pointer;
+    }
+    .enlaces {
+        position: fixed;
+        top: 80px;
+        background: black;
+        left: 0;
+        height: 100%;
+        transition: 1s;
+        width: 0;
+        overflow: hidden;*
+    }
+    .enlaces a {
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 20px;
+        text-align: center;
+        background: black;
+        color: #fff;
+    }
+}

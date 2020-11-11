@@ -1,0 +1,68 @@
+/* Footer */
+
+.footer-fondo {
+    background: url(../img/fondonegro.jpg);
+}
+
+.footer-contacto {
+    float: left;
+}
+
+.footer-horario {
+    float: right;
+}
+
+.footer-card {
+    width: 30%;
+    margin: auto;
+    text-align: left;
+    font-weight: 300;
+    color: rgb(219, 144, .5);
+}
+
+.footer-logo {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+/* hace referencia a la clase del logo de la imagen */
+
+.footer-logo img {
+    width: 40%;
+    /* indica la anchura del logo */
+}
+
+
+/*hace referencia a las etiquedas p del footer*/
+
+footer p {
+    margin-top: 10px;
+}
+
+
+/*  dejar espacio entre cada seccion*/
+
+.contenedor {
+    margin: auto;
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+@media screen and (max-width: 500px) {
+    /* anchura del logo */
+    .footer-logo {
+        width: 80%;
+    }
+    .footer-card {
+        width: 90%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+}
